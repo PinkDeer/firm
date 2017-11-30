@@ -1,0 +1,8 @@
+<h1><%= @firm.name %></h1>
+<p><%= @firm.logo %></p>
+<p><%= @firm.datestamp %></p>
+<p><%= @firm.people %></p>
+
+<%= link_to 'Back', root_path, class: "btn btn-primary" %>
+<%= link_to "Edit", edit_firm_path(@firm), class: "btn btn-primary"%>
+<%= link_to "Delete", firm_path(@firm), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
