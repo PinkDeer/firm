@@ -1,3 +1,4 @@
 <% @firms.each do |firm| %>
   <h2><%= link_to firm.name, firm %></h2>
+  <h3><%= firm.skills.map(&:name).sort.join(", ") %></h3>
 <% end %>

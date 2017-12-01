@@ -45,6 +45,6 @@ class FirmsController < ApplicationController
     end
 
     def firm_params
-      params.require(:firm).permit(:name, :logo, :datestamp, :people)
+      params.require(:firm).permit(:name, :logo, :datestamp, :people, skill_ids:[])
     end
 end
