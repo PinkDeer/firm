@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'simple_form',    '3.5'
 gem 'better_errors',  '2.4'
 gem 'ancestry',       '2.1'
+gem 'devise',         '4.3'
 
 group :development, :test do
   gem 'sqlite3',      '1.3.13'
