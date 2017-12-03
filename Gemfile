@@ -15,6 +15,7 @@ gem 'ancestry',       '2.1'
 gem 'devise',         '4.3'
 gem 'rails_admin',    '1.2'
 gem 'pundit',         '1.1'
+gem 'paperclip',      '5.1'
 
 group :development, :test do
   gem 'sqlite3',      '1.3.13'

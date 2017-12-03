@@ -1,4 +1,7 @@
 <% @firms.each do |firm| %>
+  <%= link_to firm do %>
+    <%= image_tag firm.image.url(:medium) %>
+  <% end %>
   <h2><%= link_to firm.name, firm %></h2>
   <h3><%= firm.skills.map(&:name).sort.join(", ") %></h3>
 <% end %>
