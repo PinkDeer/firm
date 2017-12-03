@@ -4,6 +4,7 @@ class SkillsController < ApplicationController
 
   def index
     @skills = Skill.where(:status => true)
+    authorize @skills
   end
 
   def show
@@ -11,10 +12,14 @@ class SkillsController < ApplicationController
 
   def new
     @skill = Skill.new
+    authorize @skill
   end
 
   def create
     @skill = Skill.new(skill_params)
+    @skill.user = current_user
+    authorize @skill
+
     if @skill.save
 			redirect_to @skill
 		else
@@ -42,6 +47,7 @@ class SkillsController < ApplicationController
 
     def find_skill
       @skill = Skill.find(params[:id])
+      authorize @skill
     end
 
     def skill_params
