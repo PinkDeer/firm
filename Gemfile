@@ -13,6 +13,7 @@ gem 'simple_form',    '3.5'
 gem 'better_errors',  '2.4'
 gem 'ancestry',       '2.1'
 gem 'devise',         '4.3'
+gem 'rails_admin',    '1.2'
 
 group :development, :test do
   gem 'sqlite3',      '1.3.13'
