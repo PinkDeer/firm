@@ -3,7 +3,7 @@ class SkillsController < ApplicationController
   before_action :find_skill, only: [:show, :edit, :update, :destroy]
 
   def index
-    @skills = Skill.all
+    @skills = Skill.where(:status => true)
   end
 
   def show
