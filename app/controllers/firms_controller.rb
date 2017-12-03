@@ -4,6 +4,7 @@ class FirmsController < ApplicationController
 
   def index
     @firms = Firm.all
+    authorize @firms
   end
 
   def show
@@ -11,10 +12,14 @@ class FirmsController < ApplicationController
 
   def new
     @firm = Firm.new
+    authorize @firm
   end
 
   def create
     @firm = Firm.new(firm_params)
+    @firm.user = current_user
+    authorize @firm
+
     if @firm.save
 			redirect_to @firm
 		else
@@ -42,6 +47,7 @@ class FirmsController < ApplicationController
 
     def find_firm
       @firm = Firm.find(params[:id])
+      authorize @firm
     end
 
     def firm_params
